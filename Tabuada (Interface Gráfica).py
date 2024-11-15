@@ -15,7 +15,7 @@ def calcular_tabuada():
 # Configuração da janela principal
 janela = tk.Tk()
 janela.title("Tabuada")
-janela.geometry("300x400")
+janela.geometry("400x500")
 janela.configure(bg="#66CDAA")
 
 # Título
@@ -31,16 +31,12 @@ entry_numero = tk.Entry(frame_entrada, font=("Helvetica", 12), width=5)
 entry_numero.grid(row=0, column=1, padx=5)
 
 # Botão para calcular a tabuada
-botao_calcular = ttk.Button(janela, text="Calcular", command=calcular_tabuada)
+botao_calcular = tk.Button(janela, text="Calcular", command=calcular_tabuada, font=("Arial", 14, "bold"), bg="Indigo", fg="yellow")
 botao_calcular.pack(pady=10)
 
 # Área de exibição do resultado
 label_resultado = tk.Label(janela, text="", font=("Helvetica", 12), bg="#ffffff", fg="#333333", justify="left")
 label_resultado.pack(pady=20, padx=10, fill=tk.BOTH, expand=True)
-
-# Estilo do botão
-estilo = ttk.Style()
-estilo.configure("TButton", background="orangered", font=("Helvetica", 12, "bold"), foreground="indigo")
 
 # Inicia a aplicação
 janela.mainloop()
